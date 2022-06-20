@@ -9,41 +9,45 @@
   }
 
   .container{
+    background-color: #262e36;
+    margin: 0;
+    min-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-image:linear-gradient(to top left, rgb(129, 0, 141), rgb(43, 3, 41));
-    width: 100vw;
-    height: 100vh;
   }
 
   .piano{
-    display: inline-flex;
-    position:inherit;
+    display:flex;
+    position: relative;
+    justify-content: center;
     background-color: black;
-    width: 60vw;
-    height: 30vh;
+    width: 62vw;
+    height: 30.7vh;
     padding: 2px;
     
   }
 
+  .key {
+    height: calc(var(--width)*4);
+    width: calc(var(--width)*4);
+}
+
   .white{
-    display: grid;
-    justify-content: center;
-    align-items: bottom;
-    background-color: aliceblue;
-    margin: 2px;
-    width: 3vw;
-    height: 28vh;
-    z-index: 1;
+    --width: 70px;
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 10px;
   }
 
   .black{
-    display: inline-flex;
-    justify-content: center;
-    margin: 2px;
-    background-color: rgb(17, 17, 17);
-    width: 1.5vw;
-    height: 15vh;
-    z-index: 1;
+    --width: 45px;
+    background-color: black;
+    border: 1px solid #333;
+    margin-left: calc(var(--width)/-2);
+    margin-right: calc(var(--width)/-2);
+    z-index: 2;
+    border-radius: 10px;
+    transition: 200ms;
   }
