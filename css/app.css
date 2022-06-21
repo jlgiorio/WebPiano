@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Share Tech Mono', monospace;
-    color: rgb(255, 145, 0);
   }
 
   .container{
@@ -29,25 +28,55 @@
     
   }
 
-  .key {
+  .key {/* Use the height and width of each key color to determine the general size of the keys */
     height: calc(var(--width)*4);
     width: calc(var(--width)*4);
 }
 
   .white{
     --width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 210px;
     background-color: white;
     border: 1px solid #333;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: inset 0px 0px 10px rgb(78, 78, 78);
+    color: rgb(46, 46, 45);
   }
 
   .black{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
     --width: 45px;
+    color: rgb(165, 164, 162);
     background-color: black;
     border: 1px solid #333;
+    border-radius: 0 0 10px 10px;
+    box-shadow: inset 5px -8px 8px 1px rgba(77, 76, 76, 0.726);
     margin-left: calc(var(--width)/-2);
     margin-right: calc(var(--width)/-2);
     z-index: 2;
-    border-radius: 10px;
-    transition: 200ms;
+  }
+
+  .note {
+    padding-bottom: 5px;
+  }
+
+  .keyboard{
+    color: rgb(47, 14, 236);
+  }
+
+
+  .white-active{
+    box-shadow: 0 0 0;
+  }
+
+  .black-active{
+    box-shadow: 0 0 0;
   }
