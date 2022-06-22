@@ -7,7 +7,7 @@
     font-family: 'Share Tech Mono', monospace;
   }
 
-  .container{
+.container{
     background-color: #262e36;
     margin: 0;
     min-height: 100vh;
@@ -15,25 +15,25 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .piano{
+.piano{
     display:flex;
     position: relative;
     justify-content: center;
     background-color: black;
-    width: 62vw;
-    height: 30.7vh;
-    padding: 2px;
-    
-  }
+    width: 60vw;
+    height: 32.7vh;
+    padding: 0 14px 0 14px;
+    overflow-y: hidden;
+}
 
-  .key {/* Use the height and width of each key color to determine the general size of the keys */
+.key {/* Use the height and width of each key color to determine the general size of the keys */
     height: calc(var(--width)*4);
     width: calc(var(--width)*4);
 }
 
-  .white{
+.white{
     --width: 70px;
     display: flex;
     flex-direction: column;
@@ -45,9 +45,9 @@
     border-radius: 0px 0px 10px 10px;
     box-shadow: inset 0px 0px 10px rgb(78, 78, 78);
     color: rgb(46, 46, 45);
-  }
+}
 
-  .black{
+.black{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,21 +62,20 @@
     margin-left: calc(var(--width)/-2);
     margin-right: calc(var(--width)/-2);
     z-index: 2;
-  }
+}
 
-  .note {
+.note {
     padding-bottom: 5px;
-  }
+}
 
-  .keyboard{
+.keyboard{
     color: rgb(47, 14, 236);
-  }
+}
 
+.white-active{
+    box-shadow: 0px 0px 30px 10px rgba(207, 91, 236, 0.527);
+}
 
-  .white-active{
-    box-shadow: 0 0 0;
-  }
-
-  .black-active{
-    box-shadow: 0 0 0;
-  }
+.black-active{
+    box-shadow: 0px 0px 30px 10px rgba(15, 199, 245, 0.527);
+}
