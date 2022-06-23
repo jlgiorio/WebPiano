@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Share Tech Mono', monospace;
+    --width: 280px;
+    --height: 5px;
+    --top: 60px;
+    --left: -30px;
+    --right: 0px;
   }
 
 .container{
@@ -12,7 +17,7 @@
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
+
     justify-content: center;
     align-items: center;
 }
@@ -68,14 +73,67 @@
     padding-bottom: 5px;
 }
 
-.keyboard{
-    color: rgb(47, 14, 236);
+
+.key-active{
+    box-shadow: 0px 0px 0px 0px rgba(15, 199, 245, 0.527);
 }
 
-.white-active{
-    box-shadow: 0px 0px 30px 10px rgba(207, 91, 236, 0.527);
+.base{
+    top: 350px;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #171818;
+    border-radius: 50%;
+    border: 3px solid black;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    overflow: hidden;
 }
 
-.black-active{
-    box-shadow: 0px 0px 30px 10px rgba(15, 199, 245, 0.527);
+.base-active{
+    box-shadow: 0px 0px 30px rgb(0, 89, 255);
+}
+
+.speaker{
+    top: 350px;
+    width: 250px;
+    height: 250px;
+    background-color: #171818;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    box-shadow: 0px 0px 30px rgba(41, 41, 39, 0.63);
+    
+   
+}
+
+.speaker-active{
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.842);
+}
+
+.left{
+    left: 50px;
+    transform: rotate(-15deg);
+}
+
+.right{
+    right: 50px;
+    transform: rotate(15deg);
+}
+
+.detail{
+    display: flex;
+    position:relative;
+    left: var(--left);
+    width:var(--width);
+    height: 5px;
+    top: -10px;
+    background-color: #171818;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid #555;
+    margin-top: 15px;
+    border-radius: 100%;   
 }
